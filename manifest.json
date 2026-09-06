@@ -1,0 +1,9 @@
+{
+  "id": "inline-conversions",
+  "name": "Inline Conversions",
+  "version": "0.1.0",
+  "minAppVersion": "1.7.0",
+  "description": "Display currencies and measurements in preferred units while preserving original Markdown, with alternate conversions on hover.",
+  "author": "Oleg Bezrukavnikov",
+  "isDesktopOnly": false
+}
