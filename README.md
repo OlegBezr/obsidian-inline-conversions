@@ -8,6 +8,16 @@ mobile and with a keyboard.
 The plugin never accesses the network. Currency conversions are calculated from
 a file in your vault that you own and update.
 
+## Preview
+
+### Length conversions
+
+![Length conversions with alternate values shown on hover](assets/screenshots/length-conversions.png)
+
+### Temperature and natural prose
+
+![Temperature, currency, length, and mass conversions in natural prose](assets/screenshots/temperature-and-prose-conversions.png)
+
 ## Syntax
 
 Wrap an explicitly marked value in inline code:
