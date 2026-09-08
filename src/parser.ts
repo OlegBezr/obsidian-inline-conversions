@@ -112,7 +112,7 @@ export function parseValue(input: string): ParsedValue | null {
   match = raw.match(new RegExp(`^(${NUMBER_SOURCE})\\s*(${symbolPattern})$`, "i"));
   if (match) return currencyValue(raw, match[1], CURRENCY_SYMBOLS[canonicalSymbol(match[2])]);
 
-  match = raw.match(new RegExp(`^(${NUMBER_SOURCE})\\s*([°a-zA-Z\"'′]+)$`, "i"));
+  match = raw.match(new RegExp(`^(${NUMBER_SOURCE})\\s*([°a-zA-Z"'′]+)$`, "i"));
   if (match) {
     const parsed = unitValue(raw, match[1], match[2]);
     if (parsed) return parsed;
@@ -157,7 +157,7 @@ export function parseFlexibleNumber(input: string): number | null {
 
 function parseCompoundLength(raw: string): ParsedValue | null {
   const feetInches = raw.match(
-    new RegExp(`^(${NUMBER_SOURCE})\\s*(?:ft|feet|foot|'|′)\\s*(${NUMBER_SOURCE})\\s*(?:in|inch|inches|\")$`, "i"),
+    new RegExp(`^(${NUMBER_SOURCE})\\s*(?:ft|feet|foot|'|′)\\s*(${NUMBER_SOURCE})\\s*(?:in|inch|inches|")$`, "i"),
   );
   if (!feetInches) return null;
 

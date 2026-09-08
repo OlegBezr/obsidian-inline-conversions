@@ -72,7 +72,7 @@ export default class InlineConversionsPlugin extends Plugin {
 
   createValueElement(token: string): HTMLElement {
     const rendered = this.evaluateToken(token);
-    const element = document.createElement("span");
+    const element = createSpan();
     if (!rendered) {
       element.textContent = `\`${token}\``;
       return element;
