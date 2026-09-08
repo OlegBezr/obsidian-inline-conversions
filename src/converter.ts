@@ -171,7 +171,8 @@ function formatConverted(
   if (kind === "currency" && settings.useCurrencySymbols && CURRENCY_SYMBOLS[unit.toUpperCase()]) {
     return `${CURRENCY_SYMBOLS[unit.toUpperCase()]}${formatted}`;
   }
-  return `${formatted} ${unit.toUpperCase()}`;
+  if (kind === "currency") return `${formatted} ${unit.toUpperCase()}`;
+  return `${formatted} ${unit}`;
 }
 
 function currencyProblem(parsed: ParsedValue, primary: string, rates: CurrencyRates | null): string {

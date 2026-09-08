@@ -23,6 +23,19 @@ describe("conversion", () => {
       .toBeCloseTo(4.5359237);
   });
 
+  it("preserves standard casing for physical unit symbols", () => {
+    expect(renderValue(
+      { kind: "length", value: 6, unit: "ft", original: "6 ft" },
+      DEFAULT_SETTINGS,
+      null,
+    ).display).toBe("1.83 m");
+    expect(renderValue(
+      { kind: "mass", value: 10, unit: "lb", original: "10 lb" },
+      DEFAULT_SETTINGS,
+      null,
+    ).display).toBe("4.54 kg");
+  });
+
   it("converts temperatures", () => {
     expect(convert({ kind: "temperature", value: 72, unit: "F", original: "72 F" }, "C", null))
       .toBeCloseTo(22.2222);

@@ -9,7 +9,6 @@ export class InlineConversionsSettingTab extends PluginSettingTab {
   display(): void {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Inline Conversions" });
 
     new Setting(containerEl)
       .setName("Inline marker")
